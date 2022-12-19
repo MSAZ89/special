@@ -21,6 +21,7 @@ export default function Home() {
   const descriptionRef = useRef(null);
   const priceRef = useRef(null);
   const addressRef = useRef(null);
+  const [currentListingIndex, setCurrentListingIndex] = useState(null);
 
   const addListing = () => {
     if (
@@ -53,8 +54,40 @@ export default function Home() {
     setListings(newListings);
   };
 
+  const [isEditing, setIsEditing] = useState(false);
+
   const handleEdit = (listing, index) => {
-    alert("editing " + listing.title + " at index " + index);
+    titleRef.current.value = listing.title;
+    descriptionRef.current.value = listing.description;
+    priceRef.current.value = listing.price;
+    addressRef.current.value = listing.address;
+    setIsEditing(true);
+    setCurrentListingIndex(index);
+  };
+
+  // function to edit the title, description, price, and address of a listing at a given index and update our listings state
+  const editListing = (index, title, description, price, address) => {
+    const newListings = [...listings];
+    newListings[index].title = title;
+    newListings[index].description = description;
+    newListings[index].price = price;
+    newListings[index].address = address;
+    setListings(newListings);
+  };
+
+  const finishEdit = () => {
+    editListing(
+      currentListingIndex,
+      titleRef.current.value,
+      descriptionRef.current.value,
+      priceRef.current.value,
+      addressRef.current.value
+    );
+    setIsEditing(false);
+    titleRef.current.value = "";
+    descriptionRef.current.value = "";
+    priceRef.current.value = "";
+    addressRef.current.value = "";
   };
 
   return (
@@ -63,42 +96,84 @@ export default function Home() {
         <div className="md:flex h-auto">
           {/*Sidebar Start*/}
           <aside className="md:w-1/4">
+            {/*Listing Fields Start*/}
+            {isEditing ? (
+              //editing listing fields
+              <div className="px-4 py-2 flex flex-col gap-4 bg-slate-200">
+                <label>Listing Title</label>
+                <input
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                  ref={titleRef}
+                  type="text"
+                  defaultValue={listings[currentListingIndex].title}
+                />
+                <label>Listing Description</label>
+                <textarea
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                  ref={descriptionRef}
+                  type="text"
+                  rows={8}
+                  defaultValue={listings[currentListingIndex].description}
+                />
+                <label>Listing Price</label>
+                <input
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                  ref={priceRef}
+                  type="text"
+                  defaultValue={listings[currentListingIndex].price}
+                />
+                <label>Listing Address</label>
+                <input
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                  ref={addressRef}
+                  type="text"
+                  defaultValue={listings[currentListingIndex].address}
+                />
+              </div>
+            ) : (
+              //normal listing fields
+              <div className="px-4 py-2 flex flex-col gap-4">
+                <label>Listing Title</label>
+                <input
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                  ref={titleRef}
+                  type="text"
+                  defaultValue={""}
+                />
+                <label>Listing Description</label>
+                <textarea
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                  ref={descriptionRef}
+                  type="text"
+                  rows={8}
+                />
+                <label>Listing Price</label>
+                <input
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                  ref={priceRef}
+                  type="text"
+                />
+                <label>Listing Address</label>
+                <input
+                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                  ref={addressRef}
+                  type="text"
+                />
+              </div>
+            )}
             <nav className="px-4 py-2 md:w-1/4">
-              <ul className="flex gap-2">
-                <Hoverbutton onClick={() => addListing()}>Add</Hoverbutton>
-                <Hoverbutton onClick={() => removeAllListings()}>
-                  Clear
-                </Hoverbutton>
-              </ul>
+              {isEditing ? (
+                <div className="flex">
+                  <Hoverbutton onClick={() => finishEdit()}>
+                    Complete
+                  </Hoverbutton>
+                </div>
+              ) : (
+                <ul className="flex gap-2">
+                  <Hoverbutton onClick={() => addListing()}>Add</Hoverbutton>
+                </ul>
+              )}
             </nav>
-            {/*Listing Fields Start*/}
-            <div className="px-4 py-2 flex flex-col gap-4">
-              <label>Listing Title</label>
-              <input
-                className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 focus:px-2 focus:py-1 focus:text-lg text-sm p-1"
-                ref={titleRef}
-                type="text"
-              />
-              <label>Listing Description</label>
-              <textarea
-                className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 focus:px-2 focus:py-1 focus:text-lg text-sm p-1"
-                ref={descriptionRef}
-                type="text"
-              />
-              <label>Listing Price</label>
-              <input
-                className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 focus:px-2 focus:py-1 focus:text-lg text-sm p-1"
-                ref={priceRef}
-                type="text"
-              />
-              <label>Listing Address</label>
-              <input
-                className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 focus:px-2 focus:py-1 focus:text-lg text-sm p-1"
-                ref={addressRef}
-                type="text"
-              />
-            </div>
-            {/*Listing Fields Start*/}
           </aside>
           {/*Main Content Start*/}
           <main className=" md:w-3/4">
