@@ -16,9 +16,9 @@ export default function Modal(props) {
           <div className="justify-center flex overflow-x-hidden fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-full xl:w-1/2 px-4 my-4 mx-auto">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                 {/*header*/}
-                <div className="flex items-start justify-between p-8 border-b border-solid border-slate-200 rounded-t">
+                <div className="flex items-start justify-between p-8 border-b border-solid border-slate-200">
                   <h3 className="text-xl lg:text-3xl font-semibold text-black">
                     {props.title}
                   </h3>
@@ -35,9 +35,9 @@ export default function Modal(props) {
                   </div>
                 </div>
                 {/*footer*/}
-                <div className="flex items-center justify-start p-8 border-t border-solid border-slate-200 rounded-b">
+                <div className="flex items-center justify-start p-8 border-t border-solid border-slate-200">
                   <button
-                    className="text-center text-sm bg-gray-500 text-white rounded py-1 px-3 hover:bg-gray-200 hover:text-gray-400 transition-all border hover:border-gray-500"
+                    className="text-center text-sm bg-gray-500 text-white py-1 px-3 hover:bg-gray-200 hover:text-gray-400 transition-all border hover:border-gray-500"
                     onClick={() => setShowModal(false)}
                     aria-label="Close Popup Button"
                     type="button"
