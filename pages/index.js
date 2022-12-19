@@ -3,6 +3,7 @@ import Hoverbutton from "../comps/ui/hoverbutton";
 import Listings from "../comps/listings";
 import { useState, useRef } from "react";
 import data from "../public/data.json";
+import { list } from "postcss";
 
 //listing class with constructor title and description
 class Listing {
@@ -96,84 +97,96 @@ export default function Home() {
         <div className="md:flex h-auto">
           {/*Sidebar Start*/}
           <aside className="md:w-1/4">
-            {/*Listing Fields Start*/}
-            {isEditing ? (
-              //editing listing fields
-              <div className="px-4 py-2 flex flex-col gap-4 bg-slate-200">
-                <label>Listing Title</label>
-                <input
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
-                  ref={titleRef}
-                  type="text"
-                  defaultValue={listings[currentListingIndex].title}
-                />
-                <label>Listing Description</label>
-                <textarea
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
-                  ref={descriptionRef}
-                  type="text"
-                  rows={8}
-                  defaultValue={listings[currentListingIndex].description}
-                />
-                <label>Listing Price</label>
-                <input
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
-                  ref={priceRef}
-                  type="text"
-                  defaultValue={listings[currentListingIndex].price}
-                />
-                <label>Listing Address</label>
-                <input
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
-                  ref={addressRef}
-                  type="text"
-                  defaultValue={listings[currentListingIndex].address}
-                />
-              </div>
-            ) : (
-              //normal listing fields
-              <div className="px-4 py-2 flex flex-col gap-4">
-                <label>Listing Title</label>
-                <input
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
-                  ref={titleRef}
-                  type="text"
-                  defaultValue={""}
-                />
-                <label>Listing Description</label>
-                <textarea
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
-                  ref={descriptionRef}
-                  type="text"
-                  rows={8}
-                />
-                <label>Listing Price</label>
-                <input
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
-                  ref={priceRef}
-                  type="text"
-                />
-                <label>Listing Address</label>
-                <input
-                  className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
-                  ref={addressRef}
-                  type="text"
-                />
-              </div>
-            )}
-            <nav className="px-4 py-2 md:w-1/4">
+            <div className="md:fixed md:w-1/4">
+              <h1 className="mx-auto text-center text-2xl font-bold my-8">
+                My Listings
+              </h1>
+              {/*Listing Fields Start*/}
               {isEditing ? (
-                <div className="flex">
-                  <Hoverbutton onClick={() => finishEdit()}>
-                    Complete
-                  </Hoverbutton>
+                //editing listing fields
+                <div className="px-4 py-2 flex flex-col gap-4 bg-slate-200">
+                  <h2 className="text-xl font-bold">
+                    Editing {listings[currentListingIndex].title}
+                  </h2>
+                  <label>Listing Title</label>
+                  <input
+                    className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                    ref={titleRef}
+                    type="text"
+                    defaultValue={listings[currentListingIndex].title}
+                  />
+                  <label>Listing Description</label>
+                  <textarea
+                    className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                    ref={descriptionRef}
+                    type="text"
+                    rows={8}
+                    defaultValue={listings[currentListingIndex].description}
+                  />
+                  <label>Listing Price</label>
+                  <input
+                    className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                    ref={priceRef}
+                    type="text"
+                    defaultValue={listings[currentListingIndex].price}
+                  />
+                  <label>Listing Address</label>
+                  <input
+                    className="w-full bg-slate-100 transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50  text-sm p-1"
+                    ref={addressRef}
+                    type="text"
+                    defaultValue={listings[currentListingIndex].address}
+                  />
                 </div>
               ) : (
-                <ul className="flex gap-2">
-                  <Hoverbutton onClick={() => addListing()}>Add</Hoverbutton>
-                </ul>
+                //normal listing fields
+                <div className="px-4 py-2 flex flex-col gap-4 bg-slate-100">
+                  <h2 className="text-xl font-bold">New Listing</h2>
+                  <label>Listing Title</label>
+                  <input
+                    className="w-full bg-white transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                    ref={titleRef}
+                    type="text"
+                    defaultValue={""}
+                  />
+                  <label>Listing Description</label>
+                  <textarea
+                    className="w-full bg-white transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                    ref={descriptionRef}
+                    type="text"
+                    rows={8}
+                  />
+                  <label>Listing Price</label>
+                  <input
+                    className="w-full bg-white transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                    ref={priceRef}
+                    type="text"
+                  />
+                  <label>Listing Address</label>
+                  <input
+                    className="w-full bg-white transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
+                    ref={addressRef}
+                    type="text"
+                  />
+                </div>
               )}
-            </nav>
+              <nav className="px-4 py-2 md:w-1/4">
+                {isEditing ? (
+                  <div className="flex">
+                    <button
+                      className="text-center text-sm bg-gray-500 text-white rounded py-1 px-3 hover:bg-gray-200 hover:text-gray-400 transition-all border hover:border-gray-500"
+                      onClick={() => finishEdit()}
+                    >
+                      Complete
+                    </button>
+                  </div>
+                ) : (
+                  <ul className="flex gap-2">
+                    <Hoverbutton onClick={() => addListing()}>Add</Hoverbutton>
+                  </ul>
+                )}
+              </nav>
+            </div>
           </aside>
           {/*Main Content Start*/}
           <main className=" md:w-3/4">

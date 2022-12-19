@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Hoverbutton({ href, children, onClick }) {
   return (
     <Link
-      href={href !== undefined ? href : ""}
+      href={href !== undefined ? href : "#"}
       key={href}
       onClick={onClick}
       aria-label="Button"

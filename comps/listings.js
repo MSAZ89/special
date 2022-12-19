@@ -1,4 +1,5 @@
 import Modal from "./ui/modal";
+import Link from "next/link";
 
 export default function Listings({ listings, handleDelete, handleEdit }) {
   return (
@@ -32,20 +33,20 @@ export default function Listings({ listings, handleDelete, handleEdit }) {
                     </button>
                   </div>
                 </div>
-                <p>{listing.address}</p>
-                <p className="text-sm mb-2">{listing.description}</p>
-                <p className="text-green-700 text-md mb-4">${listing.price}</p>
+                <div className="flex flex-col gap-4 rounded">
+                  <p className="text-sm">{listing.address}</p>
+                  <p className="text-sm mb-2">{listing.description}</p>
+                </div>
+                <p className="text-green-700 text-sm mb-4">${listing.price}</p>
                 <Modal
                   open={"View " + listing.title}
-                  title={
-                    <h2 className="text-2xl font-bold">{listing.title}</h2>
-                  }
+                  title={<h2 className="text-xl font-bold">{listing.title}</h2>}
                 >
-                  <p>{listing.address}</p>
-                  <p className="text-sm mb-2">{listing.description}</p>
-                  <p className="text-green-700 text-md mb-4">
+                  <p className="tracking-tight font-bold">{listing.address}</p>
+                  <p className="text-green-700 tracking-wide">
                     ${listing.price}
                   </p>
+                  <p className="text-md mt-8">{listing.description}</p>
                 </Modal>
               </li>
             ))
