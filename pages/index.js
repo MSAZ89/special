@@ -94,18 +94,15 @@ export default function Home() {
   return (
     <>
       <Layout title="Next App" desc="Next App">
-        <div className="md:flex h-auto">
+        <div className="lg:flex h-auto">
           {/*Sidebar Start*/}
-          <aside className="md:w-1/4">
-            <div className="md:fixed md:w-1/4">
-              <h1 className="mx-auto text-center text-2xl font-bold my-8">
-                My Listings
-              </h1>
+          <aside className="lg:w-1/4">
+            <div className="lg:fixed lg:w-1/4 lg:flex lg:flex-col lg:justify-start lg:items-start lg:h-screen">
               {/*Listing Fields Start*/}
               {isEditing ? (
                 //editing listing fields
-                <div className="px-4 py-2 flex flex-col gap-4 bg-slate-200">
-                  <h2 className="text-xl font-bold">
+                <div className="p-8 flex flex-col gap-4 bg-slate-200 w-full">
+                  <h2 className="text-xl font-bold text-center">
                     Editing {listings[currentListingIndex].title}
                   </h2>
                   <label>Listing Title</label>
@@ -140,8 +137,8 @@ export default function Home() {
                 </div>
               ) : (
                 //normal listing fields
-                <div className="px-4 py-2 flex flex-col gap-4 bg-slate-100">
-                  <h2 className="text-xl font-bold">New Listing</h2>
+                <div className="p-8 flex flex-col gap-4 bg-slate-100 w-full">
+                  <h2 className="text-xl font-bold text-center">New Listing</h2>
                   <label>Listing Title</label>
                   <input
                     className="w-full bg-white transition-all rounded focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50 text-sm p-1"
@@ -170,7 +167,7 @@ export default function Home() {
                   />
                 </div>
               )}
-              <nav className="px-4 py-2 md:w-1/4">
+              <nav className="p-4 lg:w-1/4">
                 {isEditing ? (
                   <div className="flex">
                     <button
@@ -194,7 +191,7 @@ export default function Home() {
             </div>
           </aside>
           {/*Main Content Start*/}
-          <main className=" md:w-3/4">
+          <main className="lg:w-3/4 px-2">
             <Listings
               handleDelete={handleDelete}
               handleEdit={handleEdit}

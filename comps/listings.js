@@ -9,7 +9,7 @@ export default function Listings({ listings, handleDelete, handleEdit }) {
           ? listings.map((listing, index) => (
               <li
                 key={index}
-                className="shadow-md hover:shadow-xl bg-slate-50 px-4 py-8 my-2 flex flex-col justify-between gap-2 transition-all hover:gray-300 hover:bg-white"
+                className="shadow-md hover:shadow-xl bg-slate-100 px-4 py-8 my-2 mx-2 flex flex-col justify-between gap-2 transition-all hover:gray-300 hover:bg-white"
               >
                 <div className="flex justify-between">
                   <h2 className="text-2xl font-bold text-left">
