@@ -93,7 +93,7 @@ export default function Home() {
 
   return (
     <>
-      <Layout title="Next App" desc="Next App">
+      <Layout title="Real Estate Listings" desc="Real Estate Listings">
         <div className="lg:flex h-auto">
           {/*Sidebar Start*/}
           <aside className="lg:w-1/4">
