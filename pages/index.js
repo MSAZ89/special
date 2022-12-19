@@ -177,12 +177,17 @@ export default function Home() {
                       className="text-center text-sm bg-gray-500 text-white rounded py-1 px-3 hover:bg-gray-200 hover:text-gray-400 transition-all border hover:border-gray-500"
                       onClick={() => finishEdit()}
                     >
-                      Complete
+                      Save
                     </button>
                   </div>
                 ) : (
                   <ul className="flex gap-2">
-                    <Hoverbutton onClick={() => addListing()}>Add</Hoverbutton>
+                    <button
+                      className="text-center text-sm bg-gray-500 text-white rounded py-1 px-3 hover:bg-gray-200 hover:text-gray-400 transition-all border hover:border-gray-500"
+                      onClick={() => addListing()}
+                    >
+                      Add
+                    </button>
                   </ul>
                 )}
               </nav>
