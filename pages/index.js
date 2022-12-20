@@ -69,6 +69,7 @@ export default function Home() {
     setCurrentSelectedListingIndex(index);
   };
 
+  //currently a bug where the edit function is not working properly while the page is being filtered.
   const editListing = (index, title, description, price, address) => {
     const newListings = [...listings];
     newListings[index].title = title;
