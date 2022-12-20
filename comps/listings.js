@@ -44,6 +44,7 @@ export default function Listings({ listings, handleDelete, handleEdit }) {
                   title={<h2 className="text-xl font-bold">{listing.title}</h2>}
                 >
                   <Image
+                    className="mx-auto text-center mb-8"
                     width={728}
                     height={140}
                     alt="Listing Image"
