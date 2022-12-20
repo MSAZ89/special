@@ -43,7 +43,12 @@ export default function Listings({ listings, handleDelete, handleEdit }) {
                   open={"View " + listing.title}
                   title={<h2 className="text-xl font-bold">{listing.title}</h2>}
                 >
-                  <Image alt={listing.image} src={listing.image} />
+                  <Image
+                    width={728}
+                    height={140}
+                    alt="Listing Image"
+                    src={listing.picture}
+                  />
                   <p className="tracking-tight font-bold">{listing.address}</p>
                   <p className="text-green-700 tracking-wide">
                     ${listing.price}
