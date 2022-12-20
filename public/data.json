@@ -1,44 +1,30 @@
 [
   {
-    "title": "Combogen",
-    "description": "sit adipisicing occaecat cupidatat enim sint velit exercitation eiusmod quis proident excepteur anim laboris aliqua ipsum aliqua adipisicing occaecat elit aute duis ad culpa aliquip",
-    "price": 334999,
-    "address": "141 Blake Court, Bridgetown, Maine, 7457",
-    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
+    "title": "2022 Honda CRF 250R",
+    "description": "2022 Honda CRF 250R Description",
+    "price": 8500,
+    "address": "Las Vegas, Nevada",
+    "picture": "/placeholder.png"
   },
   {
-    "title": "Indexia",
-    "description": "consectetur adipisicing Lorem reprehenderit aliqua nostrud in quis veniam sunt sunt amet cillum ad aliqua velit consequat ut aliquip mollit magna anim Lorem id cupidatat",
-    "price": 420000,
-    "address": "612 Visitation Place, Greenwich, Maryland, 2548",
-    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
+    "title": "2022 Honda CRF 450R",
+    "description": "2022 Honda CRF 450R Description",
+    "price": 11500,
+    "address": "Las Vegas, Nevada",
+    "picture": "/placeholder.png"
   },
   {
-    "title": "Undertap",
-    "description": "fugiat fugiat aliquip pariatur ad cillum consequat voluptate do et consequat sit eiusmod esse aliqua est exercitation fugiat sit labore exercitation occaecat est eiusmod ut",
-    "price": 334999,
-    "address": "671 Greenwood Avenue, Loomis, Michigan, 9237",
-    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
+    "title": "2021 Honda CRF 250R",
+    "description": "2021 Honda CRF 250R Description",
+    "price": 7500,
+    "address": "Phoenix, Arizona",
+    "picture": "/placeholder.png"
   },
   {
-    "title": "Venoflex",
-    "description": "aliqua occaecat occaecat dolor eu eu qui pariatur ipsum ad et laborum enim consequat voluptate eiusmod esse adipisicing cupidatat tempor do voluptate ipsum consequat labore",
-    "price": 295000,
-    "address": "828 Glen Street, Albrightsville, Colorado, 292",
-    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
-  },
-  {
-    "title": "Futuris",
-    "description": "ut mollit sunt magna excepteur ut aliquip eiusmod nostrud cillum laboris mollit sunt minim mollit laboris anim Lorem veniam id elit nisi anim aliquip fugiat",
-    "price": 409000,
-    "address": "938 Bristol Street, Dunbar, Northern Mariana Islands, 9501",
-    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
-  },
-  {
-    "title": "Permadyne",
-    "description": "voluptate aute sint sunt aliqua do do commodo voluptate quis officia do velit officia adipisicing id velit est deserunt officia officia labore ea aliquip laboris",
-    "price": 332000,
-    "address": "506 Rapelye Street, Eggertsville, Wyoming, 5951",
-    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
+    "title": "2021 Honda CRF 450R",
+    "description": "2021 Honda CRF 450R Description",
+    "price": 10500,
+    "address": "Phoenix, Arizona",
+    "picture": "/placeholder.png"
   }
 ]
