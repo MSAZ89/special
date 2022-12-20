@@ -30,7 +30,12 @@ export default function Home() {
   const [isEditing, setIsEditing] = useState(false);
 
   const addListing = () => {
-    if (titleRef.current.value != "" && addressRef.current.value != "") {
+    if (
+      titleRef.current.value != "" &&
+      addressRef.current.value != "" &&
+      priceRef.current.value != "" &&
+      descriptionRef.current.value != ""
+    ) {
       const listing = new Listing(
         titleRef.current.value,
         descriptionRef.current.value,
