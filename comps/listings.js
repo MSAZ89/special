@@ -1,5 +1,6 @@
 import Modal from "./ui/modal";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Listings({ listings, handleDelete, handleEdit }) {
   return (
@@ -42,6 +43,7 @@ export default function Listings({ listings, handleDelete, handleEdit }) {
                   open={"View " + listing.title}
                   title={<h2 className="text-xl font-bold">{listing.title}</h2>}
                 >
+                  <Image alt={listing.image} src={listing.image} />
                   <p className="tracking-tight font-bold">{listing.address}</p>
                   <p className="text-green-700 tracking-wide">
                     ${listing.price}

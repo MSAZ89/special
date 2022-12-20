@@ -1,38 +1,44 @@
 [
   {
-    "title": "Zoid",
-    "description": "Cillum ea commodo non magna laborum qui labore voluptate ad irure voluptate laboris officia. Velit ut quis conseq.\r\n",
-    "price": 290000,
-    "address": "692 High Street, Bartley, New Jersey, 1432"
+    "title": "Combogen",
+    "description": "sit adipisicing occaecat cupidatat enim sint velit exercitation eiusmod quis proident excepteur anim laboris aliqua ipsum aliqua adipisicing occaecat elit aute duis ad culpa aliquip",
+    "price": 334999,
+    "address": "141 Blake Court, Bridgetown, Maine, 7457",
+    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
   },
   {
-    "title": "Gaptec",
-    "description": "Sunt nostrud eiusmod aliqua aliquip. Occaecat excepteur est nostrud laborum ad do ipsum exercitation culpa incididunt. Id amet sunt ex cillum eiusmod. Et ipsum commodo tempor deserunt.\r\n",
+    "title": "Indexia",
+    "description": "consectetur adipisicing Lorem reprehenderit aliqua nostrud in quis veniam sunt sunt amet cillum ad aliqua velit consequat ut aliquip mollit magna anim Lorem id cupidatat",
     "price": 420000,
-    "address": "448 Woodpoint Road, Duryea, Alabama, 8905"
+    "address": "612 Visitation Place, Greenwich, Maryland, 2548",
+    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
   },
   {
-    "title": "Steelfab",
-    "description": "Ex magna culpa labore commodo ut ex ad labore ut aute do. Ut voluptate do nostrud culpa adipisicing magna consectetur ea minim in nostrud. Ipsum cupidatat aliquip esse qui consequat Lorem dolore non ut consectetur nostrud.\r\n",
-    "price": 400000,
-    "address": "126 Legion Street, Hoagland, Oregon, 7747"
+    "title": "Undertap",
+    "description": "fugiat fugiat aliquip pariatur ad cillum consequat voluptate do et consequat sit eiusmod esse aliqua est exercitation fugiat sit labore exercitation occaecat est eiusmod ut",
+    "price": 334999,
+    "address": "671 Greenwood Avenue, Loomis, Michigan, 9237",
+    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
   },
   {
-    "title": "Ecosys",
-    "description": "Aute non qui nisi aute ex est nisi in pariatur do do magna. Officia esse duis occaecat magna deserunt aute aliqua in officia sint nostrud proident veniam officia. Voluptate ullamco elit incididunt ex quis. Ex nulla minim aute id consectetur consequat pariatur labore nostrud commodo. Elit tempor sunt deserunt minim occaecat minim nisi. Fugiat non dolor excepteur duis magna consequat in do.\r\n",
+    "title": "Venoflex",
+    "description": "aliqua occaecat occaecat dolor eu eu qui pariatur ipsum ad et laborum enim consequat voluptate eiusmod esse adipisicing cupidatat tempor do voluptate ipsum consequat labore",
     "price": 295000,
-    "address": "695 College Place, Marienthal, North Dakota, 836"
+    "address": "828 Glen Street, Albrightsville, Colorado, 292",
+    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
   },
   {
-    "title": "Comtour",
-    "description": "Deserunt cupidatat quis minim sit eiusmod adipisicing quis aliquip ad. Occaecat labore qui excepteur proident in. Laboris labore sit anim ipsum aliquip commodo sit sit ex consequat nulla adipisicing id consequat. Ad dolor fugiat nisi commodo velit consectetur ipsum non laboris dolore pariatur. Commodo officia voluptate minim non cillum Lorem eiusmod laboris sunt ipsum sint.\r\n",
-    "price": 290000,
-    "address": "459 McKibbin Street, Worton, American Samoa, 8228"
+    "title": "Futuris",
+    "description": "ut mollit sunt magna excepteur ut aliquip eiusmod nostrud cillum laboris mollit sunt minim mollit laboris anim Lorem veniam id elit nisi anim aliquip fugiat",
+    "price": 409000,
+    "address": "938 Bristol Street, Dunbar, Northern Mariana Islands, 9501",
+    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
   },
   {
-    "title": "Enaut",
-    "description": "Nisi qui enim irure labore id dolore ea. Laboris deserunt ipsum elit irure excepteur sunt ipsum et velit occaecat. Sunt labore culpa et adipisicing anim pariatur. Dolor est laborum sint nisi consequat aliquip laborum. Ad officia ex nostrud ullamco fugiat amet amet mollit sunt. Excepteur aute nostrud proident mollit elit ullamco dolor in commodo do Lorem exercitation.\r\n",
-    "price": 420000,
-    "address": "962 Hornell Loop, Abiquiu, Guam, 3101"
+    "title": "Permadyne",
+    "description": "voluptate aute sint sunt aliqua do do commodo voluptate quis officia do velit officia adipisicing id velit est deserunt officia officia labore ea aliquip laboris",
+    "price": 332000,
+    "address": "506 Rapelye Street, Eggertsville, Wyoming, 5951",
+    "picture": "https://via.placeholder.com/728x140.png?text=Listing+Image"
   }
 ]
